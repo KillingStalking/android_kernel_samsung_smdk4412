@@ -123,7 +123,12 @@ config CPU_FREQ_DEFAULT_GOV_PEGASUSQ
 	bool "pegasusq"
 	select CPU_FREQ_GOV_PEGASUSQ
 
+config CPU_FREQ_DEFAULT_GOV_HYPER
+        bool "hyper"
+        select CPU_FREQ_GOV_HYPER
+
 endchoice
+
 
 config CPU_FREQ_GOV_PERFORMANCE
 	tristate "'performance' governor"
@@ -265,6 +270,9 @@ config CPU_FREQ_GOV_ADAPTIVE
 
 config CPU_FREQ_GOV_PEGASUSQ
 	tristate "'pegasusq' cpufreq policy governor"
+
+config CPU_FREQ_GOV_HYPER
+        tristate "'hyper' cpufreq governor"
 
 config CPU_FREQ_GOV_PEGASUSQ_BOOST
 	bool "pegasusq - enable suport for userspace-controlled cpu boosts"
